@@ -1,0 +1,350 @@
+ its corresponding type declarations.
+
+4 import { ProdutoService } from 'src/app/produto.service';
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:12:23 - error NG2003: No suitable injection token for parameter '_produtoService' of class 'CadastroProdutoComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+
+12   constructor(private _produtoService: ProdutoService, private
+                         ~~~~~~~~~~~~~~~
+
+  src/app/restrito/cadastro-produto/cadastro-produto.component.ts:12:40
+    12   constructor(private _produtoService: ProdutoService, private
+                                              ~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:12:56 - error TS7006: Parameter 'private' implicitly has an 'any' type.
+
+12   constructor(private _produtoService: ProdutoService, private
+                                                          ~~~~~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:13:1 - error TS1005: ',' expected.
+
+13 router: Router) { }
+   ~~~~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:18:7 - error TS7006: Parameter 'produto' implicitly has an 'any' type.
+
+18       produto => {
+         ~~~~~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:22:7 - error TS7006: Parameter 'err' implicitly has an 'any' type.  
+
+22       err => {
+         ~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:26:10 - error TS2339: Property 'router' does not exist on type 'CadastroProdutoComponent'.
+
+26     this.router.navigate(["/restrito/lista"]);
+            ~~~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:4:25 - error TS2307: Cannot find module 'src/app/models/Produtos.model' or its corresponding type declarations.
+
+4 import { Produto } from 'src/app/models/Produtos.model';
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:5:32 - error TS2307: Cannot find module 'src/app/produto.service' or its corresponding type declarations.
+
+5 import { ProdutoService } from 'src/app/produto.service';
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:14:23 - error NG2003: No suitable injection token for parameter '_produtoService' of class 'ListaProdutoComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+
+14   constructor(private _produtoService: ProdutoService,
+                         ~~~~~~~~~~~~~~~
+
+  src/app/restrito/lista-produto/lista-produto.component.ts:14:40
+    14   constructor(private _produtoService: ProdutoService,
+                                              ~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:24:9 - error TS7006: Parameter 'retornaProduto' implicitly has an 'any' type.
+
+24         retornaProduto => {
+           ~~~~~~~~~~~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:26:13 - error TS7006: Parameter 'item' implicitly has an 'any' type.      
+
+26             item => {
+               ~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:41:7 - error TS7006: Parameter 'vaga' implicitly has an 'any' type.       
+
+41       vaga => {
+         ~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:44:7 - error TS7006: Parameter 'err' implicitly has an 'any' type.        
+
+44       err => { console.log("erro ao Excluir") }
+         ~~~
+
+
+
+
+× Failed to compile.
+
+ *  Histórico restaurado 
+
+Microsoft Windows [versão 10.0.19045.2604]
+(c) Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\anaco\Documents\consumo-api\consumo-api>ng serve
+✔ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   3.83 MB |
+styles.css, styles.js | styles        | 558.27 kB |
+polyfills.js          | polyfills     | 314.27 kB |
+scripts.js            | scripts       | 142.17 kB |
+main.js               | main          |  42.86 kB |
+runtime.js            | runtime       |   6.51 kB |
+
+                      | Initial Total |   4.86 MB
+
+Build at: 2023-03-08T22:41:44.073Z - Hash: 9ac56087c0be4244 - Time: 63377ms
+
+./src/app/restrito/cadastro-produto/cadastro-produto.component.ts - Error: Module build failed (from ./node_modules/@angular-devkit/build-angular/src/babel/webpack-loader.js):
+SyntaxError: C:\Users\anaco\Documents\consumo-api\consumo-api\src\app\restrito\cadastro-produto\cadastro-produto.component.ts: 
+Unexpected reserved word 'private'. (5:33)
+
+  3 | import { Produto } from 'src/app/models/Produto.model';
+  4 | let CadastroProdutoComponent = class CadastroProdutoComponent {
+> 5 |     constructor(_produtoService, private, router) {
+    |                                  ^
+  6 |         this._produtoService = _produtoService;
+  7 |         this.produto = new Produto(0, "", "", "", 0);
+  8 |     }
+
+./src/app/restrito/lista-produto/lista-produto.component.ts:3:0-56 - Error: Module not found: Error: Can't resolve 'src/app/models/Produtos.model' in 'C:\Users\anaco\Documents\consumo-api\consumo-api\src\app\restrito\lista-produto'
+
+Error: src/app/app-routing.module.ts:10:65 - error TS2304: Cannot find name 'GuardGuard'.
+
+10   {path: 'restrito',component: RestritoComponent, canActivate: [GuardGuard]},
+                                                                   ~~~~~~~~~~
+
+
+Error: src/app/app.module.ts:30:5 - error NG6001: The class 'InicioComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+
+30     InicioComponent,
+       ~~~~~~~~~~~~~~~
+
+  src/app/inicio/inicio.component.ts:9:14
+    9 export class InicioComponent implements OnInit {
+                   ~~~~~~~~~~~~~~~
+    'InicioComponent' is declared here.
+
+
+Error: src/app/app.module.ts:35:5 - error NG6001: The class 'AtualizaProdutoComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+
+35     AtualizaProdutoComponent,
+       ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/restrito/atualiza-produto/atualiza-produto.component.ts:11:14
+    11 export class AtualizaProdutoComponent implements OnInit {
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+    'AtualizaProdutoComponent' is declared here.
+
+
+Error: src/app/app.module.ts:36:5 - error NG6001: The class 'CadastroProdutoComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+
+36     CadastroProdutoComponent,
+       ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/restrito/cadastro-produto/cadastro-produto.component.ts:10:14
+    10 export class CadastroProdutoComponent implements OnInit {
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+    'CadastroProdutoComponent' is declared here.
+
+
+Error: src/app/app.module.ts:37:5 - error NG6001: The class 'ListaProdutoComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.
+
+37     ListaProdutoComponent,
+       ~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/restrito/lista-produto/lista-produto.component.ts:11:14
+    11 export class ListaProdutoComponent {
+                    ~~~~~~~~~~~~~~~~~~~~~
+    'ListaProdutoComponent' is declared here.
+
+
+Error: src/app/inicio/inicio.component.ts:3:32 - error TS2307: Cannot find module '../produto.service' or its corresponding type declarations.
+
+3 import { ProdutoService } from '../produto.service';
+                                 ~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/inicio/inicio.component.ts:11:23 - error NG2003: No suitable injection token for parameter '_produtoService' of 
+class 'InicioComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+
+11   constructor(private _produtoService: ProdutoService) { }
+                         ~~~~~~~~~~~~~~~
+
+  src/app/inicio/inicio.component.ts:11:40
+    11   constructor(private _produtoService: ProdutoService) { }
+                                              ~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
+
+
+Error: src/app/inicio/inicio.component.ts:18:9 - error TS7006: Parameter 'retornaProduto' implicitly has an 'any' type.        
+
+18         retornaProduto => {
+           ~~~~~~~~~~~~~~
+
+
+Error: src/app/inicio/inicio.component.ts:20:13 - error TS7006: Parameter 'item' implicitly has an 'any' type.
+
+20             item => {
+               ~~~~
+
+
+Error: src/app/restrito/atualiza-produto/atualiza-produto.component.ts:3:32 - error TS2307: Cannot find module 'src/app/produto.service' or its corresponding type declarations.
+
+3 import { ProdutoService } from 'src/app/produto.service';
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/restrito/atualiza-produto/atualiza-produto.component.ts:14:23 - error NG2003: No suitable injection token for parameter '_produtoService' of class 'AtualizaProdutoComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+
+14   constructor(private _produtoService: ProdutoService, private _activatedRoute:
+                         ~~~~~~~~~~~~~~~
+
+  src/app/restrito/atualiza-produto/atualiza-produto.component.ts:14:40
+    14   constructor(private _produtoService: ProdutoService, private _activatedRoute:
+                                              ~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
+
+
+Error: src/app/restrito/atualiza-produto/atualiza-produto.component.ts:32:7 - error TS7006: Parameter 'produto' implicitly has 
+an 'any' type.
+
+32       produto => { this.produto = new Produto(0, "", "", "", 0) },
+         ~~~~~~~
+
+
+Error: src/app/restrito/atualiza-produto/atualiza-produto.component.ts:33:7 - error TS7006: Parameter 'err' implicitly has an 'any' type.
+
+33       err => { console.log("erro ao atualizar") }
+         ~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:4:32 - error TS2307: Cannot find module 'src/app/produto.service' or its corresponding type declarations.
+
+4 import { ProdutoService } from 'src/app/produto.service';
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:12:23 - error NG2003: No suitable injection token for parameter '_produtoService' of class 'CadastroProdutoComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+
+12   constructor(private _produtoService: ProdutoService, private
+                         ~~~~~~~~~~~~~~~
+
+  src/app/restrito/cadastro-produto/cadastro-produto.component.ts:12:40
+    12   constructor(private _produtoService: ProdutoService, private
+                                              ~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:12:56 - error TS7006: Parameter 'private' implicitly has an 'any' type.
+
+12   constructor(private _produtoService: ProdutoService, private
+                                                          ~~~~~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:13:1 - error TS1005: ',' expected.
+
+13 router: Router) { }
+   ~~~~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:18:7 - error TS7006: Parameter 'produto' implicitly has 
+an 'any' type.
+
+18       produto => {
+         ~~~~~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:22:7 - error TS7006: Parameter 'err' implicitly has an 'any' type.
+
+22       err => {
+         ~~~
+
+
+Error: src/app/restrito/cadastro-produto/cadastro-produto.component.ts:26:10 - error TS2339: Property 'router' does not exist on type 'CadastroProdutoComponent'.
+
+26     this.router.navigate(["/restrito/lista"]);
+            ~~~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:4:25 - error TS2307: Cannot find module 'src/app/models/Produtos.model' or its corresponding type declarations.
+
+4 import { Produto } from 'src/app/models/Produtos.model';
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:5:32 - error TS2307: Cannot find module 'src/app/produto.service' or its corresponding type declarations.
+
+5 import { ProdutoService } from 'src/app/produto.service';
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:14:23 - error NG2003: No suitable injection token for parameter '_produtoService' of class 'ListaProdutoComponent'.
+  Consider using the @Inject decorator to specify an injection token.
+
+14   constructor(private _produtoService: ProdutoService,
+                         ~~~~~~~~~~~~~~~
+
+  src/app/restrito/lista-produto/lista-produto.component.ts:14:40
+    14   constructor(private _produtoService: ProdutoService,
+                                              ~~~~~~~~~~~~~~
+    This type does not have a value, so it cannot be used as injection token.
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:24:9 - error TS7006: Parameter 'retornaProduto' implicitly has an 'any' type.
+
+24         retornaProduto => {
+           ~~~~~~~~~~~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:26:13 - error TS7006: Parameter 'item' implicitly has an 'any' type.
+
+26             item => {
+               ~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:41:7 - error TS7006: Parameter 'vaga' implicitly has an 'any' 
+type.
+
+41       vaga => {
+         ~~~~
+
+
+Error: src/app/restrito/lista-produto/lista-produto.component.ts:44:7 - error TS7006: Parameter 'err' implicitly has an 'any' type.
+
+44       err => { console.log("erro ao Excluir") }
+         ~~~
+
+
+
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+× Failed to compile.
