@@ -1,1 +1,1 @@
-https://github.com/claudiadecopas/consumo-api/tree/componentes-do-projeto-atualizacao/consumo-api
+https://github.com/claudiadecopas/exercicio_consumo_api
